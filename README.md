@@ -6,7 +6,7 @@ The consumer gets the latest value in the channel. If it is not able to keep up 
 
 This may be useful when a producer is publishing values at a rate faster than the consumer can consumer those. The values itself should not be critical as some values may get dropped. The main benefit is to not overburden the CPU or memory by queueing up lots of unnecessary work.
 
-1. Create a channel
+**Create a channel**
 
 ```swift
 let downloadProgress = ThrottledChannel<Double>() {
@@ -14,7 +14,8 @@ let downloadProgress = ThrottledChannel<Double>() {
 }
 ```
 
-2. Publish values to the channel
+**Publish values to the channel**
+
 ```swift
 downloadProgress.send(0.0)
 downloadProgress.send(0.1)
