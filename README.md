@@ -23,3 +23,34 @@ downloadProgress.send(0.85)
 ```
 
 Checkout the Playground. The source for `ThrottledChannel` is in the `Sources` directory of the playground.
+
+With a sleep time of `0.2`, the reader only gets called roughly once every 700 values:
+
+```
+1
+708
+1407
+2082
+2767
+3476
+4200
+4906
+5625
+6339
+7061
+7777
+8507
+9219
+9920
+```
+
+With a sleep time of `0.5`, it gets called even lesser:
+
+```
+1
+1765
+3543
+5300
+7078
+8802
+```
